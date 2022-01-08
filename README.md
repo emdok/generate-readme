@@ -1,8 +1,8 @@
-# 
+# Project 1
 
 ## Description
 
-
+this is a description
 
 
 ## Table of Contents
@@ -17,12 +17,12 @@ If your README is very long, add a table of contents to make it easy for users t
 
 ## Installation
 
-
+none
 
 
 ## Usage 
 
-
+none
 
 
 ## License
