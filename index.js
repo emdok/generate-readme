@@ -60,7 +60,7 @@ const init =  () => {
             type: 'checkbox',
             name: 'license',
             message: 'Please select a license for your project',
-            choices: ['Apache', 'BSD', 'Creative Commons', 'Eclipse', 'GNU', 'IBM', 'MIT', 'Mozilla', 'Open Data Commons', 'Perl', 'Zlib']
+            choices: ['Apache', 'BSD', 'CreativeCommons', 'Eclipse', 'GNU', 'IBM', 'MIT', 'Mozilla', 'OpenDataCommons', 'Perl', 'Zlib']
         }
     ]); 
 };

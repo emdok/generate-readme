@@ -16,9 +16,6 @@ const licenseData = {
 
 const generateBadgeChoice = (licenseChoice) => licenseData[licenseChoice]
 
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(data) {
   const userLicense = generateBadgeChoice(data.license)
 
@@ -33,9 +30,21 @@ This project is using the following license: [${userLicense[0]}](${userLicense[1
 
 }
 
+function renderBadgeSection(data) {
+  const userBadge = generateBadgeChoice(data.license)
+
+  if (userBadge) {
+    return `${userBadge[2]}`
+  }
+  return '';
+
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `${renderBadgeSection(data)}
+
+# ${data.title}
 
 ## Description
 
