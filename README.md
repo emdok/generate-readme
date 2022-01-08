@@ -1,8 +1,8 @@
-# Project 1
+# 
 
 ## Description
 
-this is a description
+
 
 
 ## Table of Contents
@@ -17,17 +17,18 @@ If your README is very long, add a table of contents to make it easy for users t
 
 ## Installation
 
-none
+
 
 
 ## Usage 
 
-none
 
 
-## License
 
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
+## License 
+    
+This project is using the following license: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
+    
 
 
 ## Badges
@@ -43,4 +44,6 @@ If you created an application or package and would like other developers to cont
 ## Tests
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
+
+
 
