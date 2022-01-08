@@ -1,16 +1,75 @@
-// TODO: Include packages needed for this application
+const {generateMarkdown} = require('./utils/generateMarkdown.js');
+const inquirer = require('inquirer');
+const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = [];
+//
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+
+    fs.writeFile('./README.md', data, (err) => {
+        if (err) throw err;
+        console.log('Readme has been created!');
+      });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+const init =  () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'githubUsername',
+            message: 'What is your github username?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What is your email address?"
+        },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your project?'
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Please input the description of your project'
+        },
+        {
+            type: 'input',
+            name: 'install',
+            message: 'Please input your installation instructions'
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Please input your usage information.'
+        },
+        {
+            type: 'input',
+            name: 'contributions',
+            message: 'Please add any contributors to your project'
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Please enter any tests your users can use'
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'Please select a license for your project',
+            choices: ['Apache', 'BSD', 'Creative Commons', 'Eclipse', 'GNU', 'IBM', 'MIT', 'Mozilla', 'Open Data Commons', 'Perl', 'Zlib']
+        }
+    ]); 
+};
 
 // Function call to initialize app
-init();
+init().then((answers) => {
+    console.log(answers);
+    writeToFile(generateMarkdown(answers));
+});
 
 
 
