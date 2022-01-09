@@ -62,8 +62,7 @@ function renderLicenseSection(data) {
   const userLicense = generateBadgeChoice(data.license);
 
   if (userLicense) {
-    return `
-## License 
+    return `## License 
     
 This project is using the following license: [${userLicense[0]}](${userLicense[1]})
     `;
@@ -79,6 +78,20 @@ function renderBadgeSection(data) {
   }
   return "";
 }
+
+function renderQuestionSection(data) {
+  const username = data.githubUsername;
+  const email = data.email;
+
+  if (username) {
+    return `## Questions
+    
+Link to Github profile: [${username}](www.github.com/${username})
+
+Should you have any questions about how to use this repo, feel free to contact me at ${email}`
+  }
+  return ' '
+};
 
 
 function generateMarkdown(data) {
@@ -99,6 +112,7 @@ If your README is very long, add a table of contents to make it easy for users t
 * [Usage](#usage)
 * [Contributors](#contributors)
 * [Tests](#tests)
+* [Questions](#questions)
 * [License](#license)
 
 
@@ -118,6 +132,8 @@ If you created an application or package and would like other developers to cont
 ## Tests
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
+
+${renderQuestionSection(data)}
 
 ${renderLicenseSection(data)}
 

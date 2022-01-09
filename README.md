@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 
 # Project 1
 
@@ -15,6 +15,7 @@ If your README is very long, add a table of contents to make it easy for users t
 * [Usage](#usage)
 * [Contributors](#contributors)
 * [Tests](#tests)
+* [Questions](#questions)
 * [License](#license)
 
 
@@ -35,9 +36,10 @@ If you created an application or package and would like other developers to cont
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
+## Questions
+Link to Github profile: [emdok](www.github.com/emdok)
 
-## License 
-    
-This project is using the following license: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
-    
+Should you have any questions about how to use this repo, feel free to contact me at dokkenemily@gmail.com
+
+
 
