@@ -58,7 +58,15 @@ const init =  () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Please input the description of your project'
+            message: 'Please input the description of your project. (Required)',
+            validate: (descInput) => {
+                if (descInput) {
+                  return true;
+                } else {
+                  console.log("Please enter a description.");
+                  return false;
+                }
+              }
         },
         {
             type: 'input',

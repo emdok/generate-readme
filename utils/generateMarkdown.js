@@ -1,3 +1,4 @@
+let contents = ['Questions'];
 const licenseData = {
   Apache: [
     "Apache 2.0",
@@ -62,6 +63,7 @@ function renderLicenseSection(data) {
   const userLicense = generateBadgeChoice(data.license);
 
   if (userLicense) {
+    contents.push('License');
     return `## License 
     
 This project is using the following license: [${userLicense[0]}](${userLicense[1]})
@@ -88,11 +90,53 @@ function renderQuestionSection(data) {
     
 Link to Github profile: [${username}](www.github.com/${username})
 
-Should you have any questions about how to use this repo, feel free to contact me at ${email}`
+Should you have any questions about how to use this repo, feel free to contact me at ${email}`;
   }
-  return ' '
-};
+  return "";
+}
 
+function renderInstallSection(data) {
+  const install = data.install;
+
+  if (install) {
+    contents.push('Installation');
+    return contents, `## Installation
+
+${install}`;
+  }
+  return "";
+}
+
+function renderUsageSection(data) {
+  const usage = data.usage;
+
+  if (usage) {
+    contents.push('Usage');
+    return contents, `## Usage
+
+${usage}`;
+  }
+  return "";
+}
+
+function renderContributorsSection(data) {
+  const contributors = data.contributions;
+
+  if (contributors) {
+    contents.push('Contributors');
+    return contents, `## Contributors
+
+${contributors}`;
+  }
+  return "";
+}
+
+function generateTableOfContents() {
+  console.log(contents);
+  for (i = 0; i < contents.length; i++) {
+    return `* [${contents[i]}](#${contents[i]})`
+  }
+}
 
 function generateMarkdown(data) {
   return `${renderBadgeSection(data)}
@@ -106,32 +150,13 @@ ${data.description}
 
 ## Table of Contents
 
-If your README is very long, add a table of contents to make it easy for users to find what they need.
+${generateTableOfContents()}
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributors](#contributors)
-* [Tests](#tests)
-* [Questions](#questions)
-* [License](#license)
+${renderInstallSection(data)}
 
+${renderUsageSection(data)}
 
-## Installation
-
-${data.install}
-
-
-## Usage 
-
-${data.usage}
-
-## Contributors
-
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
+${renderContributorsSection(data)}
 
 ${renderQuestionSection(data)}
 
