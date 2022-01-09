@@ -67,6 +67,7 @@ function renderLicenseSection(data) {
 This project is using the following license: [${userLicense[0]}](${userLicense[1]})
     `;
   }
+  return "";
 }
 
 function renderBadgeSection(data) {
@@ -125,16 +126,41 @@ ${contributors}`;
   return "";
 }
 
-function generateTableOfContents(data) {
-  let contents = Object.keys(data);
-  contents.splice(0, 4);
-  console.log(contents);
-
-  for (i = 0; i < contents.length; i++) {
-    return `* [${contents[i]}](#${contents[i]})`
+const tocInstall = data => {
+  if (data.install) {
+    return `* [Installation](#installation)`
   }
-
+  return "";
 }
+
+const tocUsage = data => {
+  if (data.usage) {
+    return `* [Usage](#usage)`
+  }
+  return "";
+}
+
+const tocContributions = data => {
+  if (data.contributions) {
+    return `* [Contributions](#contributions)`
+  }
+  return "";
+}
+
+const tocTests = data => {
+  if(data.tests) {
+    return `* [Tests](#tests)`
+  }
+  return "";
+}
+
+const tocLicense = data => {
+  if (data.license) {
+    return `* [License](#license)`
+  }
+  return "";
+}
+
 
 function generateMarkdown(data) {
   return `${renderBadgeSection(data)}
@@ -148,7 +174,11 @@ ${data.description}
 
 ## Table of Contents
 
-${generateTableOfContents(data)}
+${tocInstall(data)}
+${tocUsage(data)}
+${tocContributions(data)}
+* [Questions](#questions)
+${tocLicense(data)}
 
 ${renderInstallSection(data)}
 
