@@ -1,4 +1,3 @@
-let contents = ['Questions'];
 const licenseData = {
   Apache: [
     "Apache 2.0",
@@ -63,13 +62,11 @@ function renderLicenseSection(data) {
   const userLicense = generateBadgeChoice(data.license);
 
   if (userLicense) {
-    contents.push('License');
     return `## License 
     
 This project is using the following license: [${userLicense[0]}](${userLicense[1]})
     `;
   }
-  return "";
 }
 
 function renderBadgeSection(data) {
@@ -99,7 +96,6 @@ function renderInstallSection(data) {
   const install = data.install;
 
   if (install) {
-    contents.push('Installation');
     return `## Installation
 
 ${install}`;
@@ -111,7 +107,6 @@ function renderUsageSection(data) {
   const usage = data.usage;
 
   if (usage) {
-    contents.push('Usage');
     return `## Usage
 
 ${usage}`;
@@ -123,7 +118,6 @@ function renderContributorsSection(data) {
   const contributors = data.contributions;
 
   if (contributors) {
-    contents.push('Contributors');
     return `## Contributors
 
 ${contributors}`;
@@ -131,11 +125,15 @@ ${contributors}`;
   return "";
 }
 
-function generateTableOfContents() {
+function generateTableOfContents(data) {
+  let contents = Object.keys(data);
+  contents.splice(0, 4);
   console.log(contents);
+
   for (i = 0; i < contents.length; i++) {
     return `* [${contents[i]}](#${contents[i]})`
   }
+
 }
 
 function generateMarkdown(data) {
@@ -150,7 +148,7 @@ ${data.description}
 
 ## Table of Contents
 
-${generateTableOfContents()}
+${generateTableOfContents(data)}
 
 ${renderInstallSection(data)}
 
