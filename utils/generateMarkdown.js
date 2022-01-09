@@ -100,7 +100,7 @@ function renderInstallSection(data) {
 
   if (install) {
     contents.push('Installation');
-    return contents, `## Installation
+    return `## Installation
 
 ${install}`;
   }
@@ -112,7 +112,7 @@ function renderUsageSection(data) {
 
   if (usage) {
     contents.push('Usage');
-    return contents, `## Usage
+    return `## Usage
 
 ${usage}`;
   }
@@ -124,7 +124,7 @@ function renderContributorsSection(data) {
 
   if (contributors) {
     contents.push('Contributors');
-    return contents, `## Contributors
+    return `## Contributors
 
 ${contributors}`;
   }
