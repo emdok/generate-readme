@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# 
+# Project 1
 
 ## Description
 
@@ -13,7 +13,8 @@ If your README is very long, add a table of contents to make it easy for users t
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
+* [Contributors](#contributors)
+* [Tests](#tests)
 * [License](#license)
 
 
@@ -26,20 +27,7 @@ If your README is very long, add a table of contents to make it easy for users t
 
 
 
-
-## License 
-    
-This project is using the following license: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
-    
-
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Contributing
+## Contributors
 
 If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
 
@@ -48,4 +36,8 @@ If you created an application or package and would like other developers to cont
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
 
+## License 
+    
+This project is using the following license: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
+    
 

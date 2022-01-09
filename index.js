@@ -19,17 +19,41 @@ const init =  () => {
         {
             type: 'input',
             name: 'githubUsername',
-            message: 'What is your github username?'
+            message: 'What is your github username? (Required)',
+            validate: (userInput) => {
+                if (userInput) {
+                  return true;
+                } else {
+                  console.log("Please enter your username");
+                  return false;
+                }
+              }
         },
         {
             type: 'input',
             name: 'email',
-            message: "What is your email address?"
+            message: "What is your email address? (Required)",
+            validate: (emailInput) => {
+                if (emailInput) {
+                  return true;
+                } else {
+                  console.log("Please enter your email address.");
+                  return false;
+                }
+              }
         },
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your project?'
+            message: 'What is the title of your project? (Required)',
+            validate: (titleInput) => {
+                if (titleInput) {
+                  return true;
+                } else {
+                  console.log("Please enter a project name.");
+                  return false;
+                }
+              }
         },
         {
             type: 'input',
@@ -74,10 +98,6 @@ init().then((answers) => {
 
 
 /*
-
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-
 WHEN I enter my GitHub username
 THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
 
