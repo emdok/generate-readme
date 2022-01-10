@@ -22,6 +22,8 @@ The following commands will initialize the npm project and install the inquirer 
 ## Usage
 You can run this program by running the following command: `node index.js`
 
+Link to Walkthrough Video: https://watch.screencastify.com/v/d2KfwZe8XdBOXwpMr9Yb
+
 ## Contributions
 Emily Dokken
 
