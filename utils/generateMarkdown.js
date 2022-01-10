@@ -1,3 +1,4 @@
+var contentArray = [];
 const licenseData = {
   Apache: [
     "Apache 2.0",
@@ -93,75 +94,6 @@ Should you have any questions about how to use this repo, feel free to contact m
   return "";
 }
 
-function renderInstallSection(data) {
-  const install = data.install;
-
-  if (install) {
-    return `## Installation
-
-${install}`;
-  }
-  return "";
-}
-
-function renderUsageSection(data) {
-  const usage = data.usage;
-
-  if (usage) {
-    return `## Usage
-
-${usage}`;
-  }
-  return "";
-}
-
-function renderContributorsSection(data) {
-  const contributors = data.contributions;
-
-  if (contributors) {
-    return `## Contributors
-
-${contributors}`;
-  }
-  return "";
-}
-
-const tocInstall = data => {
-  if (data.install) {
-    return `* [Installation](#installation)`
-  }
-  return "";
-}
-
-const tocUsage = data => {
-  if (data.usage) {
-    return `* [Usage](#usage)`
-  }
-  return "";
-}
-
-const tocContributions = data => {
-  if (data.contributions) {
-    return `* [Contributions](#contributions)`
-  }
-  return "";
-}
-
-const tocTests = data => {
-  if(data.tests) {
-    return `* [Tests](#tests)`
-  }
-  return "";
-}
-
-const tocLicense = data => {
-  if (data.license) {
-    return `* [License](#license)`
-  }
-  return "";
-}
-
-
 function generateMarkdown(data) {
   return `${renderBadgeSection(data)}
 
@@ -174,17 +106,24 @@ ${data.description}
 
 ## Table of Contents
 
-${tocInstall(data)}
-${tocUsage(data)}
-${tocContributions(data)}
+${data.install? '* [Installation](#installation)' : ''}
+${data.usage? '* [Usage](#usage)':''}
+${data.contributions? '* [Contributions](#contributions)':''}
+${data.tests? '* [Tests](#tests)':''}
 * [Questions](#questions)
-${tocLicense(data)}
+${data.license? '* [License](#license)':''}
 
-${renderInstallSection(data)}
+${data.install? '## Installation':''}
+${data.install}
 
-${renderUsageSection(data)}
+${data.usage? '## Usage':''}
+${data.usage}
 
-${renderContributorsSection(data)}
+${data.contributions? '## Contributions':''}
+${data.contributions}
+
+${data.tests? '## Tests':''}
+${data.tests}
 
 ${renderQuestionSection(data)}
 
