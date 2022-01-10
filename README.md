@@ -1,10 +1,10 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# ReadMe Genarator
+# Generate ReadMe
 
 ## Description
 
-This is a node application that will allow a user to dynamically generate their ReadMe file without ever having to open up the ReadMe file itself. Instead by running 	`node index.js` from the command line, the user will be given prompts to fill out, once filled out, the ReadMe will be generated and added to the `dist` folder for them to use in their own projects.
+This is a node application that will allow a user to dynamically generate their ReadMe file without ever having to open up the ReadMe file itself.
 
 
 ## Table of Contents
@@ -17,16 +17,16 @@ This is a node application that will allow a user to dynamically generate their 
 * [License](#license)
 
 ## Installation
-The following commands will initialize the npm project and install inquirer and its dependencies. Finally, you can run node index.js to run the program and answer the prompts.
+The following commands will initialize the npm project and install the inquirer and its dependencies. Finally, you can run node index.js to run the program and answer the prompts. Run `npm init` then `npm install inquirer`
 
 ## Usage
-You can run this program by entering the following commands in terminal after you have installed all of the dependencies:
+You can run this program by running the following command: `node index.js`
 
 ## Contributions
-Run node index.js
+Emily Dokken
 
 ## Tests
-There are no tests for this project.
+There are currently no tests for this project.
 
 ## Questions
     
@@ -36,6 +36,6 @@ Should you have any questions about how to use this repo, feel free to contact m
 
 ## License 
     
-This project is using the following license: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
+This project is using the following license: [MIT](https://opensource.org/licenses/MIT)
     
 
