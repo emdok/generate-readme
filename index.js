@@ -7,7 +7,7 @@ const fs = require('fs');
 // TODO: Create a function to write README file
 function writeToFile(data) {
 
-    fs.writeFile('./dist/README.md', data, (err) => {
+    fs.writeFile('./README.md', data, (err) => {
         if (err) throw err;
         console.log('Readme has been created!');
       });
