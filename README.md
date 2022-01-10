@@ -30,7 +30,7 @@ There are currently no tests for this project.
 
 ## Questions
     
-Link to Github profile: [emdok](www.github.com/emdok)
+Link to Github profile: [emdok](github.com/emdok)
 
 Should you have any questions about how to use this repo, feel free to contact me at dokkenemily@gmail.com
 
