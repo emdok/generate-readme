@@ -1,4 +1,3 @@
-var contentArray = [];
 const licenseData = {
   Apache: [
     "Apache 2.0",
@@ -57,8 +56,10 @@ const licenseData = {
   ],
 };
 
+// Select Badge based on user choice in application
 const generateBadgeChoice = (licenseChoice) => licenseData[licenseChoice];
 
+// Render License section based on users choice of license
 function renderLicenseSection(data) {
   const userLicense = generateBadgeChoice(data.license);
 
@@ -71,6 +72,7 @@ This project is using the following license: [${userLicense[0]}](${userLicense[1
   return "";
 }
 
+// Render Badge based on user choice
 function renderBadgeSection(data) {
   const userBadge = generateBadgeChoice(data.license);
 
@@ -80,6 +82,7 @@ function renderBadgeSection(data) {
   return "";
 }
 
+// Render Question section using github username and user email
 function renderQuestionSection(data) {
   const username = data.githubUsername;
   const email = data.email;
@@ -94,6 +97,7 @@ Should you have any questions about how to use this repo, feel free to contact m
   return "";
 }
 
+// function to generate markdown based on data captured from user
 function generateMarkdown(data) {
   return `${renderBadgeSection(data)}
 
@@ -132,4 +136,5 @@ ${renderLicenseSection(data)}
 `;
 }
 
+// Export generate markdown for user in index.js
 module.exports = { generateMarkdown };

@@ -4,7 +4,7 @@ const fs = require('fs');
 
 //
 
-// TODO: Create a function to write README file
+// Function to write new file using node's File System module
 function writeToFile(data) {
 
     fs.writeFile('./README.md', data, (err) => {
@@ -13,7 +13,7 @@ function writeToFile(data) {
       });
 }
 
-// TODO: Create a function to initialize app
+// Function to get user information using inquirer
 const init =  () => {
     return inquirer.prompt([
         {
@@ -97,16 +97,8 @@ const init =  () => {
     ]); 
 };
 
-// Function call to initialize app
+// Function call to initialize app and write file
 init().then((answers) => {
     console.log(answers);
     writeToFile(generateMarkdown(answers));
 });
-
-
-
-/*
-
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-*/
