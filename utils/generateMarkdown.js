@@ -87,7 +87,7 @@ function renderQuestionSection(data) {
   if (username) {
     return `## Questions
     
-Link to Github profile: [${username}](github.com/${username})
+Link to Github profile: [${username}](https://github.com/${username})
 
 Should you have any questions about how to use this repo, feel free to contact me at ${email}`;
   }
